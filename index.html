@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-3xl">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-3xl font-bold flex items-center gap-2">
+        💰 Expense Tracker
+      </h1>
+
+      <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+        Smart Budget
+      </span>
+    </div>
+
+    <!-- Input Section -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-6">
+
+      <input id="title" placeholder="Title"
+        class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm">
+
+      <input id="amount" placeholder="Amount"
+        class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm">
+
+      <input id="category" placeholder="Category"
+        class="border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-sm">
+
+      <button id="mainBtn" onclick="addExpense()"
+        class="bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
+        Add
+      </button>
+
+    </div>
+
+    <!-- Total Card -->
+    <div class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-4 rounded-xl shadow mb-6 flex justify-between items-center">
+      <h2 class="text-lg font-semibold">Total Expense</h2>
+      <span class="text-2xl font-bold">₹<span id="total">0</span></span>
+    </div>
+
+    <!-- Expense List -->
+    <ul id="list" class="space-y-4"></ul>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
